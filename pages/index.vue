@@ -2,7 +2,7 @@
   <div>
     <div class=" relative w-full h-screen overflow-hidden">
       <div class="absolute top-5 right-10">
-      <ButtonsConnexion />
+        <ButtonsConnexion />
       </div>
 
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col  items-center">
@@ -60,6 +60,7 @@ import Message from 'primevue/message';
 
 //redirect to dashboard if user is connected
 definePageMeta({
+  layout: 'home',
   middleware: [
     function (to, from) {
       // Custom inline middleware
