@@ -13,7 +13,7 @@
       <template v-if="plants.length === 0 && !isLoading">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 flex flex-col justify-center items-center">
           <h2 class="mb-5 text-xl"><i class="pi pi-info-circle"></i> You don't have any plants yet</h2>
-          <NuxtLink to="/allPlants" class="w-2/4 p-2 bg-primary text-center hover:bg-tertiary hover:text-secondary flex justify-center items-center font-medium text-secondary text-current">
+          <NuxtLink to="/plants" class="w-2/4 p-2 bg-primary text-center hover:bg-tertiary hover:text-secondary flex justify-center items-center font-medium text-secondary text-current">
             Add a plant
           </NuxtLink>
         </div>

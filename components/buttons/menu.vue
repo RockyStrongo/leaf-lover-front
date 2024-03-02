@@ -22,7 +22,7 @@ const items = ref([
       {
         label: 'All Plants',
         command: () => {
-          return navigateTo('/allPlants');
+          return navigateTo('/plants');
         }
       },
       {

@@ -29,7 +29,7 @@
 
         <div v-if="userPlants && userPlants.length === 0" class="flex flex-col md:flex-row gap-3">
             You don't have any plant in your collection yet.
-            <NuxtLink class="flex w-fit bg-primary text-secondary px-3 py-1 rounded" to="/allPlants">Browse plants
+            <NuxtLink class="flex w-fit bg-primary text-secondary px-3 py-1 rounded" to="/plants">Browse plants
             </NuxtLink>
         </div>
     </div>
