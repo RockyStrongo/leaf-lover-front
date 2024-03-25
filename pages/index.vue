@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-10">
+  <div class="mb-10">
     <div class="  w-full h-screen">
       <div class="w-full h-5/6 relative ">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col  items-center">
@@ -50,6 +50,10 @@
     <div class="mx-10 mb-10">
       <h2 class="text-3xl	w-full text-primary font-bold m-5">FAQ</h2>
       <FaqAccordion :faqs="faqs" />
+    </div>
+
+    <div class="m-10">
+      <OurFeatures />
     </div>
     <Message v-if="faqsError" severity="error">{{ faqsError }}</Message>
     <Message v-if="plantsError" severity="error">{{ plantsError }}</Message>

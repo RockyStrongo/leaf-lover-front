@@ -57,7 +57,7 @@
                 <PlantInfoItem header="SPECIES OF" :content="plant?.type" />
                 <PlantInfoItem header="WATERING" :content="plant?.watering" />
                 <PlantInfoItem header="FLOWERS" :content="plant?.flowers ? 'Yes' : 'No'" />
-                <PlantInfoItem header="CARE LEVEL" :content="plant?.careLevel" />
+                <PlantInfoItem header="CARE LEVEL" :content="plant?.careLevel ?? ''"  />
                 <PlantInfoItem header="CUISINE" :content="plant?.cuisine ? 'Yes' : 'No'" />
                 <PlantInfoItem header="HUMANS" :content="plant?.poisonousToHumans ? 'Dangerous' : 'Safe'" />
                 <PlantInfoItem header="PETS" :content="plant?.poisonousToPets ? 'Dangerous' : 'Safe'" />
