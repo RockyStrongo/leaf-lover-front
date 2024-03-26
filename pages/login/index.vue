@@ -33,7 +33,10 @@
   </div>
 </template>
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig();
+import {getCsrfToken} from '~/utils/getCsrfToken';
+const apiUri = getApiBase();
+
+const csrfToken = ref('');
 
 interface FormData {
   email: string;
@@ -63,7 +66,7 @@ const login = async () => {
   const { email, password } = formData.value;
 
   try {
-    const response = await authStore.login(email, password);
+    const response = await authStore.login(email, password, csrfToken.value);
 
     if (response.ok) {
       return navigateTo('/');
@@ -77,5 +80,10 @@ const login = async () => {
   }
 };
 
+
+onMounted(async () => {
+  const token =  await getCsrfToken(apiUri);
+  csrfToken.value = token;
+});
 
 </script>

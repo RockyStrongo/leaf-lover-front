@@ -46,13 +46,14 @@ export const useAuthStore = defineStore('auth', {
       })
       this.resetState()
     },
-    login: async function (email: string, password: string) {
+    login: async function (email: string, password: string, token: string) {
       const apiBase = getApiBase()
 
       const response = await fetch(`${apiBase}/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-CSRF-Token': token,
         },
         credentials: 'include',
         body: JSON.stringify({ email, password }),
