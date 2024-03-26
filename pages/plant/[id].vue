@@ -1,4 +1,10 @@
 <template>
+
+    <Head>
+        <Title> LeafLover - {{ plant?.commonName }}</Title>
+        <Meta name="description" :content="plant?.commonName" />
+    </Head>
+
     <div class="my-10 mx-10 md:mx-44">
         <div class="my-5 flex flex-col md:flex-row gap-5 items-center">
             <div>
@@ -16,8 +22,8 @@
             </div>
             <div v-else>
                 <Button v-if="isConnected && !userPlantData" @click="addPlantDialogVisible = true" :pt="{
-                    root: { class: 'bg-primary border-tertiary w-full md:h-fit md:w-fit' }
-                }">Add to my plants</Button>
+            root: { class: 'bg-primary border-tertiary w-full md:h-fit md:w-fit' }
+        }">Add to my plants</Button>
             </div>
 
 
@@ -57,7 +63,7 @@
                 <PlantInfoItem header="SPECIES OF" :content="plant?.type" />
                 <PlantInfoItem header="WATERING" :content="plant?.watering" />
                 <PlantInfoItem header="FLOWERS" :content="plant?.flowers ? 'Yes' : 'No'" />
-                <PlantInfoItem header="CARE LEVEL" :content="plant?.careLevel ?? ''"  />
+                <PlantInfoItem header="CARE LEVEL" :content="plant?.careLevel ?? ''" />
                 <PlantInfoItem header="CUISINE" :content="plant?.cuisine ? 'Yes' : 'No'" />
                 <PlantInfoItem header="HUMANS" :content="plant?.poisonousToHumans ? 'Dangerous' : 'Safe'" />
                 <PlantInfoItem header="PETS" :content="plant?.poisonousToPets ? 'Dangerous' : 'Safe'" />
@@ -87,7 +93,7 @@
 
     </div>
 </template>
-  
+
 <script lang="ts" setup>
 import { useRoute } from 'vue-router';
 import type { Plant } from '~/types/Plant';
