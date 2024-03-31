@@ -1,6 +1,6 @@
 <template>
   <div class="mb-10">
-    <div class="  w-full min-h-screen">
+    <div class="w-full h-screen">
       <div class="w-full h-5/6 relative ">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col  items-center">
           <h1 class="text-6xl text-white py-5">Leaf lover</h1>
@@ -9,7 +9,7 @@
 
           </div>
         </div>
-        <img class="h-full w-full object-cover" src="/hero_img.avif" alt="" srcset="">
+        <img class="h-full w-full object-cover" src="/hero_img.avif" alt="leaf-lover-hero-image" srcset="">
       </div>
       <div class="absolute top-5 right-10">
         <ButtonsConnexion />

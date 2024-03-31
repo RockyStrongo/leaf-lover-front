@@ -37,7 +37,7 @@ const items = ref([
       {
         label: 'My Plants',
         command: () => {
-          return navigateTo('/profile/myPlants');
+          return navigateTo('/profile/my-plants');
         },
         visible: () => {
           return authStore.isConnected;

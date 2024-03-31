@@ -45,7 +45,7 @@
   </div>
 
   <Dialog :header="`Add ${plant?.commonName} to your plants`" v-model:visible="addPlantDialogVisible" modal>
-            <FormAddPlantForm :plantId="plant?.id" :onPlantAdded="handlePlantAdded" :userPlant="userPlantData" />
+            <FormAddPlantForm :plantId="plant?.id" :onPlantAdded="handlePlantAdded"/>
   </Dialog>
 
 </template>

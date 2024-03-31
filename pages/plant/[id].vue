@@ -60,8 +60,8 @@
                 General info
             </h3>
             <div class="flex flex-col md:flex-row gap-4 md:w-full md:justify-between">
-                <PlantInfoItem header="SPECIES OF" :content="plant?.type" />
-                <PlantInfoItem header="WATERING" :content="plant?.watering" />
+                <PlantInfoItem header="SPECIES OF" :content="plant?.type ?? ''" />
+                <PlantInfoItem header="WATERING" :content="plant?.watering ?? ''"  />
                 <PlantInfoItem header="FLOWERS" :content="plant?.flowers ? 'Yes' : 'No'" />
                 <PlantInfoItem header="CARE LEVEL" :content="plant?.careLevel ?? ''" />
                 <PlantInfoItem header="CUISINE" :content="plant?.cuisine ? 'Yes' : 'No'" />
@@ -86,7 +86,7 @@
 
 
         <Dialog :header="`Add ${plant?.commonName} to your plants`" v-model:visible="addPlantDialogVisible" modal>
-            <FormAddPlantForm :plantId="plant?.id" :onPlantAdded="handlePlantAdded" :userPlant="userPlantData" />
+            <FormAddPlantForm :plantId="plant?.id ?? 0" :onPlantAdded="handlePlantAdded" :userPlant="userPlantData ?? undefined" />
         </Dialog>
 
 

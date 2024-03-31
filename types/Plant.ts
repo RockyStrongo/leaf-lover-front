@@ -1,4 +1,4 @@
-import type { CareGuide } from './CareGuide'
+import type { CareGuide, CareGuideWithDetails } from './CareGuide'
 import type { FAQ } from './FAQ'
 import type { UserPlant } from './UserPlant'
 
@@ -19,7 +19,7 @@ export interface Plant {
   externalId: number
   defaultImageThumbnail: string
   defaultImageRegular: string
-  CareGuide: CareGuide[]
+  CareGuide: CareGuideWithDetails[]
   Faq: FAQ[]
   UserPlant: UserPlant[]
 }

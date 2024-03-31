@@ -71,7 +71,7 @@
           </aside>
           <div class="md:w-3/4 ml-auto flex flex-wrap  justify-around">
             <div v-for=" plant  in  plantData?.plants " :key="plant.id">
-          <PlantCard :plant="plant" :userActions="userActionData" :userPlants="userPlantData" @plantAdded="refreshAll"/>
+          <PlantCard :plant="plant" :userActions="userActionData ?? []" :userPlants="userPlantData ?? []" @plantAdded="refreshAll"/>
           </div>
           </div>
         
@@ -97,7 +97,7 @@
         nextPageIcon: () => ({
           class: 'text-primary'
         }),
-        rowPerPageDropdown: ({ props }) => ({
+        rowPerPageDropdown: ({ props } : any ) => ({
           class: props.optionValue ? 'bg-primary text-secondary border-primary' : 'text-primary',
         }),
       }

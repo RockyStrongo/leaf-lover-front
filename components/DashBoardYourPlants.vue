@@ -4,7 +4,7 @@
             Your Plants
         </span>
 
-        <NuxtLink class="text-sm font-normal text-gray-700 flex flex-row items-center gap-1" to="/profile/MyPlants">
+        <NuxtLink class="text-sm font-normal text-gray-700 flex flex-row items-center gap-1" to="/profile/my-plants">
             View all
             <div class="w-3 h-3">
                 <IconsArrowRight />
