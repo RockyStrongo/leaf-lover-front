@@ -2,7 +2,7 @@
 
 From the root folder:  
 
-`docker build -t leaf_lover_front . -f ./docker/Dockerfile`
+`docker build --build-arg NUXT_PUBLIC_API_BASE="https://backenddomain.com/api/v1" -t leaf_lover_front . -f ./docker/Dockerfile`
 
 ### **Run the container**
 
